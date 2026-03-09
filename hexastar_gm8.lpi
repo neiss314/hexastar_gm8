@@ -62,7 +62,7 @@
     </RunParams>
     <Units>
       <Unit>
-        <Filename Value="hexastar.lpr"/>
+        <Filename Value="hexastar_gm8.lpr"/>
         <IsPartOfProject Value="True"/>
       </Unit>
     </Units>
@@ -97,7 +97,7 @@
     </CodeGeneration>
     <Linking>
       <Debugging>
-        <DebugInfoType Value="dsDwarf3"/>
+        <DebugInfoType Value="dsDwarf2Set"/>
         <UseHeaptrc Value="True"/>
         <TrashVariables Value="True"/>
       </Debugging>
