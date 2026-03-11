@@ -4,7 +4,10 @@ library hexastar;
 {$IFDEF fpc}
 {$MODE objfpc}
 {$ENDIF}
-//{$define odd-q}
+
+{$ifdef q}
+        {$define odd-q}
+{$endif}
 {$H+}
 
 uses

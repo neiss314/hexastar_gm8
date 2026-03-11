@@ -16,12 +16,51 @@
     </General>
     <BuildModes>
       <Item Name="Debug" Default="True"/>
-      <Item Name="Release">
+      <Item Name="Release odd-q">
         <CompilerOptions>
           <Version Value="11"/>
           <PathDelim Value="\"/>
           <Target>
-            <Filename Value="hexastar.dll" ApplyConventions="False"/>
+            <Filename Value="hexastar_odd-q.dll" ApplyConventions="False"/>
+          </Target>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir)"/>
+            <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <Parsing>
+            <Style Value="1"/>
+          </Parsing>
+          <CodeGeneration>
+            <SmartLinkUnit Value="True"/>
+            <RelocatableUnit Value="True"/>
+            <TargetCPU Value="i386"/>
+            <TargetOS Value="win32"/>
+            <Optimizations>
+              <OptimizationLevel Value="3"/>
+            </Optimizations>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <GenerateDebugInfo Value="False"/>
+              <RunWithoutDebug Value="True"/>
+              <StripSymbols Value="True"/>
+            </Debugging>
+            <LinkSmart Value="True"/>
+            <Options>
+              <ExecutableType Value="Library"/>
+            </Options>
+          </Linking>
+          <Other>
+            <CustomOptions Value="-dq"/>
+          </Other>
+        </CompilerOptions>
+      </Item>
+      <Item Name="Release odd-r">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <PathDelim Value="\"/>
+          <Target>
+            <Filename Value="hexastar_odd-r.dll" ApplyConventions="False"/>
           </Target>
           <SearchPaths>
             <IncludeFiles Value="$(ProjOutDir)"/>
@@ -64,6 +103,7 @@
       <Unit>
         <Filename Value="hexastar_gm8.lpr"/>
         <IsPartOfProject Value="True"/>
+        <UnitName Value="hexastar"/>
       </Unit>
     </Units>
   </ProjectOptions>
